@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Моя первая веб-страница — знакомство и немного обо мне.">
+  <title>Моя первая страница</title>
+  <style>
+    /* Базовые настройки страницы */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #243047;
+      background: #f3f6ff;
+      line-height: 1.6;
+    }
+
+    /* Верхняя панель сайта */
+    header {
+      padding: 20px 8%;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 12px rgba(30, 50, 90, 0.06);
+    }
+
+    .logo {
+      color: #5b5bd6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: #45516a;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #5b5bd6;
+    }
+
+    /* Главный блок с приветствием */
+    .hero {
+      min-height: 65vh;
+      padding: 80px 8%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #e5e8ff, #f8eaff);
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      color: #292957;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0 auto 28px;
+      max-width: 560px;
+      color: #56617a;
+      font-size: 1.15rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: #5b5bd6;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .button:hover {
+      background: #4545b5;
+      transform: translateY(-2px);
+    }
+
+    /* Карточки с информацией */
+    .about {
+      padding: 64px 8%;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-top: 0;
+      color: #292957;
+      font-size: 2rem;
+    }
+
+    .cards {
+      max-width: 960px;
+      margin: 30px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      text-align: left;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(30, 50, 90, 0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #5b5bd6;
+    }
+
+    footer {
+      padding: 22px 8%;
+      background: #292957;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* Упрощаем меню на узких экранах, например на iPad в портретном режиме */
+    @media (max-width: 520px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 14px 0 0;
+      }
+
+      .hero {
+        min-height: 55vh;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">Мой сайт</a>
+    <nav aria-label="Главное меню">
+      <a href="#home">Главная</a>
+      <a href="#about">Обо мне</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Привет! Это мой первый сайт 👋</h1>
+        <p>Я изучаю программирование и учусь создавать красивые веб-страницы. Добро пожаловать!</p>
+        <a class="button" href="#about">Узнать обо мне</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>Немного обо мне</h2>
+      <p>Здесь можно рассказать о себе. Замени этот текст на свои слова.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>🎨 Мои увлечения</h3>
+          <p>Напиши здесь, чем тебе нравится заниматься в свободное время.</p>
+        </article>
+        <article class="card">
+          <h3>🚀 Чему я учусь</h3>
+          <p>Сейчас я знакомлюсь с HTML и CSS — основами создания сайтов.</p>
+        </article>
+        <article class="card">
+          <h3>✨ Моя цель</h3>
+          <p>Создавать интересные проекты и шаг за шагом становиться лучше.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Мой первый сайт. Сделано с интересом к программированию.</p>
+  </footer>
+</body>
+</html>
